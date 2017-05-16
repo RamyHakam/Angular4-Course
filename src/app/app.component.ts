@@ -1,3 +1,4 @@
+import { FirstComponent } from './first/first.component';
 import { Component } from '@angular/core';
 
 @Component({
