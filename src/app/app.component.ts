@@ -8,9 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  name:string="my namedddd";
   constructor( private mylogin:LoginService){
     var first=this.mylogin.login('admin2','admin');
     var second=this.mylogin.login('admin','admin');
     console.log(first,second);
   }
+
 }
