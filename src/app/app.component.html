@@ -10,3 +10,15 @@
 <ng-template #error>
 <p > user name or password are  not  correct </p>
 </ng-template>
+
+
+<div >
+    <h1>this is the list of users from the service</h1>
+    <table>
+        <tr *ngFor="let name of names">
+            <td>id: {{name.id}} </td>
+            <td>name: {{name.name}}</td>
+            <td>photo: {{name.photo}}</td>
+        </tr>
+    </table>
+</div>
