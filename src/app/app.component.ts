@@ -12,7 +12,11 @@ export class AppComponent {
   constructor( private mylogin:LoginService){
     var first=this.mylogin.login('admin2','admin');
     var second=this.mylogin.login('admin','admin');
-    console.log(first,second);
+   // console.log(first,second);
+   console.log(this.name);
+  }
+  show(){
+    console.log(this.name);
   }
 
 }
