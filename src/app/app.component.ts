@@ -8,24 +8,31 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  name:string="my namedddd";
+  name:string;
+  password:string;
   constructor( private mylogin:LoginService){
     var first=this.mylogin.login('admin2','admin');
     var second=this.mylogin.login('admin','admin');
    // console.log(first,second);
-   console.log(this.name);
+  // console.log(this.name);
   }
-  show(){
-    console.log(this.name);
-  }
-  select(){
-    console.log("you has been selectec some text");
-  }
-  blur(){
-    console.log('input has been losed focus');
-  }
-  focus(){
-    console.log('input has beed on focus');
-  }
+  // show(){
+  //   console.log(this.name);
+  // }
+  // select(){
+  //   console.log("you has been selectec some text");
+  // }
+  // blur(){
+  //   console.log('input has been losed focus');
+  // }
+  // focus(){
+  //   console.log('input has beed on focus');
+  // }
+
+ login(){
+  var result= this.mylogin.login(this.name,this.password);
+   console.log(result);
+ }
+
 
 }

@@ -1,4 +1,7 @@
-<h1>
-    <input id='name' type=" text" (input)="show()" (focus)="focus()" (select)="select()" (blur)="blur()" [(ngModel)]=name> 
-</h1>
-
+<form>
+<label>name:</label>
+<input type="text"  name="name" [(ngModel)]="name" >
+<label > password</label>
+<input  type="password" name="pass" [(ngModel)]="password" >
+<input  type="submit" value="login" (click)="login()" >
+</form>
