@@ -1,3 +1,4 @@
+import { LoginService } from './Services/login.service';
 import { FirstComponent } from './first/first.component';
 import { Component } from '@angular/core';
 
@@ -8,4 +9,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app works!';
+  constructor( private mylogin:LoginService){
+    var first=this.mylogin.login('admin2','admin');
+    var second=this.mylogin.login('admin','admin');
+    console.log(first,second);
+  }
 }
