@@ -5,3 +5,8 @@
 <input  type="password" name="pass" [(ngModel)]="password" >
 <input  type="submit" value="login" (click)="login()" >
 </form>
+
+<p *ngIf="status; else error " > user has been login </p>
+<ng-template #error>
+<p > user name or password are  not  correct </p>
+</ng-template>

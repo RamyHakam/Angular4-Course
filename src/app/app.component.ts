@@ -10,6 +10,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   name:string;
   password:string;
+  status:boolean;
   constructor( private mylogin:LoginService){
     var first=this.mylogin.login('admin2','admin');
     var second=this.mylogin.login('admin','admin');
@@ -31,6 +32,7 @@ export class AppComponent {
 
  login(){
   var result= this.mylogin.login(this.name,this.password);
+  this.status=result;
    console.log(result);
  }
 
