@@ -18,5 +18,14 @@ export class AppComponent {
   show(){
     console.log(this.name);
   }
+  select(){
+    console.log("you has been selectec some text");
+  }
+  blur(){
+    console.log('input has been losed focus');
+  }
+  focus(){
+    console.log('input has beed on focus');
+  }
 
 }
