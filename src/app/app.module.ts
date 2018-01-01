@@ -9,10 +9,11 @@ import { AppComponent } from './app.component';
 import { LoginService } from 'app/Services/login.service';
 import { OtherComponent } from './other/other.component';
 import { RouterModule } from '@angular/router';
+import { NewComponent } from './new/new.component';
 
 @NgModule({
   declarations: [
-    AppComponent,FirstComponent, OtherComponent
+    AppComponent,FirstComponent, OtherComponent, NewComponent
   ],
   imports: [
     BrowserModule,
