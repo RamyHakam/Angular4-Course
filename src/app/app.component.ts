@@ -1,6 +1,7 @@
 import { LoginService } from './Services/login.service';
 import { FirstComponent } from './first/first.component';
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,7 @@ export class AppComponent {
   password:string;
   status:boolean;
   names:Array<object>
-  constructor( private mylogin:LoginService){
+  constructor( private mylogin:LoginService ,private myrouter:Router){
     var first=this.mylogin.login('admin2','admin');
     var second=this.mylogin.login('admin','admin');
    // console.log(first,second);
@@ -34,6 +35,14 @@ export class AppComponent {
  login(){
   var result= this.mylogin.login(this.name,this.password);
   this.status=result;
+  if(this.status){
+    //////navigate to new 
+    this.myrouter.navigate(['/new']);
+  }
+  else {
+    /////naviage to other
+    this.myrouter.navigate(['/other']);
+  }
    console.log(result);
    this.loadnames();
    console.log(this.names);
