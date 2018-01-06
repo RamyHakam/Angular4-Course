@@ -7,6 +7,6 @@ export const routes:Routes=[
     {path:'',component:OtherComponent},
     {path:'other' ,component:OtherComponent},
     {path:'first',component:FirstComponent},
-    {path:'new',component:NewComponent},
+    {path:'new/:id',component:NewComponent},
     {path:"**",component:OtherComponent}
 ];
