@@ -10,6 +10,7 @@ import { LoginService } from 'app/Services/login.service';
 import { OtherComponent } from './other/other.component';
 import { RouterModule } from '@angular/router';
 import { NewComponent } from './new/new.component';
+import { SharedService } from 'app/Services/shared.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { NewComponent } from './new/new.component';
     HttpModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [ LoginService],
+  providers: [ LoginService,SharedService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
