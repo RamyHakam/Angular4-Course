@@ -29,12 +29,16 @@
 </div>
 
 <div><h1>nav</h1>  
-<a [routerLink]="['/first',{id:030303,name:'ramy'}]"> first</a>
+<a [routerLink]="['/first',{id:030303}]"> first</a>
 <a [routerLink]="['/other']"  [queryParams]="{id:030303,status:true,name:'ramy'}">other</a>
 <a routerLink="/new/{{id}}">new</a>
 <a [routerLink]="['/new',id]">newother way </a>
 </div>
-
+<div>
+    <button (click)="goToFirst()">first</button>
+    <button (click)="goToOther()">other</button>
+    <button (click)="goToNew()">new </button>
+</div>
 <div>
     <h1> this is our routes ya prince</h1>
     <router-outlet></router-outlet>

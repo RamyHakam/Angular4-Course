@@ -52,6 +52,22 @@ export class AppComponent {
  loadnames(){
   this.names=this.mylogin.load()
  }
+ //navagite from ts 
+ //send optional params
+ goToFirst(){
+   this.myrouter.navigate(['/first',{id:39494,name:'ramy'}])
+
+ }
+ //send with query params
+ goToOther(){
+  this.myrouter.navigate(['/other'],{queryParams:{id:this.id,name:'ramy',status:true}})
+
+}
+//send required params
+goToNew(){
+  this.myrouter.navigate(['/new',this.id])
+
+}
 
 
 }

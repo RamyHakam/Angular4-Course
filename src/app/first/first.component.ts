@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
     selector: 'first',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
     styleUrls: ['first.component.css']
 })
 export class FirstComponent {
+    id:string;
+    name:string;
+    constructor(private route:ActivatedRoute){
+        //get optional params 
+        this.id= this.route.snapshot.paramMap.get('id');
+        this.name=this.route.snapshot.params['name'];
+        console.log(this.id);
+        console.log(this.name);
+
+    }
 
 }
