@@ -43,7 +43,7 @@ export class AppComponent {
   //save token to user local stoage
 
 
-  console.log("shared data has been setted");
+  //console.log("shared data has been setted");
   if(this.status){
     //////navigate to new 
     localStorage.setItem('token',"tkjkjgkjgkjfkjfkf");
@@ -78,6 +78,10 @@ goToNew(){
   this.myrouter.navigate(['/new',this.id])
 
 }
+sendMessage(){
+  return "ramy hakam";
+}
+
 
 
 }
