@@ -40,9 +40,14 @@ export class AppComponent {
   this.myshared.setUser('ramy');
   this.myshared.setToken('kdjkdjkdjdkjkjd');
   this.myshared.setLogin(true);
+  //save token to user local stoage
+
+
   console.log("shared data has been setted");
   if(this.status){
     //////navigate to new 
+    localStorage.setItem('token',"tkjkjgkjgkjfkjfkf");
+
     this.myrouter.navigate(['/new/02020']);
   }
   else {
