@@ -1,3 +1,4 @@
+import { StreamService } from './Services/stream.service';
 import { routes } from './app.routes';
 import { FirstComponent } from './first/first.component';
 import { BrowserModule } from '@angular/platform-browser';
@@ -22,7 +23,7 @@ import { SharedService } from 'app/Services/shared.service';
     HttpModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [ LoginService,SharedService],
+  providers: [ LoginService,SharedService,StreamService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
