@@ -1,3 +1,4 @@
+import { CallapiService } from './Services/callapi.service';
 import { StreamService } from './Services/stream.service';
 import { routes } from './app.routes';
 import { FirstComponent } from './first/first.component';
@@ -21,9 +22,10 @@ import { SharedService } from 'app/Services/shared.service';
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    HttpModule
   ],
-  providers: [ LoginService,SharedService,StreamService],
+  providers: [ LoginService,SharedService,StreamService,CallapiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
