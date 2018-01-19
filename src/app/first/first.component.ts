@@ -1,5 +1,6 @@
 import { Component ,Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Output ,EventEmitter } from '@angular/core';
 
 
 @Component({
@@ -11,6 +12,7 @@ export class FirstComponent {
     id:string;
     name:string;
     @Input() message:string;
+    @Output() notify=new EventEmitter<number>();
     constructor(private route:ActivatedRoute){
         //get optional params 
         this.id= this.route.snapshot.paramMap.get('id');
@@ -18,6 +20,11 @@ export class FirstComponent {
        // console.log(this.id);
         //console.log(this.name);
 
+    }
+    //send data to parant 
+    Send(){
+
+        this.notify.emit(20);
     }
 
 }

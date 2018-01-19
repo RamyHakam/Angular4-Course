@@ -15,6 +15,9 @@ export class AppComponent {
   status:boolean;
   names:Array<object>
   id:string="03003";
+   //counter of notification 
+   counter:number=0;
+
   constructor( private mylogin:LoginService ,private myrouter:Router,public myshared:SharedService){
     var first=this.mylogin.login('admin2','admin');
     var second=this.mylogin.login('admin','admin');
@@ -41,7 +44,6 @@ export class AppComponent {
   this.myshared.setToken('kdjkdjkdjdkjkjd');
   this.myshared.setLogin(true);
   //save token to user local stoage
-
 
   //console.log("shared data has been setted");
   if(this.status){
@@ -80,6 +82,11 @@ goToNew(){
 }
 sendMessage(){
   return "ramy hakam";
+}
+//get from child 
+
+getFromChild(event){
+  this.counter+=event;
 }
 
 
