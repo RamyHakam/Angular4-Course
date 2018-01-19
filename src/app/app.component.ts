@@ -17,12 +17,23 @@ export class AppComponent implements AfterViewInit {
   id:string="03003";
    //counter of notification 
    counter:number=0;
+   user:{ name , status, id ,age};
 
    @ViewChild(FirstComponent) myfirst : FirstComponent;
 
   constructor( private mylogin:LoginService ,private myrouter:Router,public myshared:SharedService){
+    
+    
+    //create user object 
+    this.user={name:'ramy',status:true, age:40, id:20}
+    
+    
     var first=this.mylogin.login('admin2','admin');
     var second=this.mylogin.login('admin','admin');
+
+
+  
+
    // console.log(first,second);
   // console.log(this.name);
   }
@@ -107,6 +118,17 @@ ngAfterViewInit(){
 
 }
 
+
+//chage classes 
+
+ChangeClass(){
+   return  {
+     'age' : this.user.age>50,
+     'id':this.user.id==25,
+     'active':this.user.status
+   }
+   
+}
 
 
 }

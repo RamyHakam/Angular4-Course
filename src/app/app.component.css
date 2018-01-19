@@ -5,3 +5,16 @@
     font-size: 23px;
     margin-bottom: 30px;
 }
+
+.notActive{
+    color: red;
+}
+.active{
+    color: green;
+}
+.id{
+    font-size: 30px;
+}
+.age {
+    border: 2px solid gray;
+}

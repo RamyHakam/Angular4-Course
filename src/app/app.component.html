@@ -1,13 +1,18 @@
 
 <div class="home">
 
-    this is the main component   this is the number of nitifcaitons  {{counter}}
+    this is the main component 
+   
+   <table>
+       <tr><td>name:</td>
+    <td>{{user.name}}</td></tr>
+    <tr>
+        <td>status:</td>
+        <td class="notActive" [ngClass]="ChangeClass()"  >Acitve</td>
+    </tr>
+   </table> 
+
 </div>
-
-<div><button (click)="getME()"> get first name </button> </div>
-<div><button (click)="changeX()"> change X value </button> </div>
-
-<first [message]="sendMessage()" (notify)="getFromChild($event)"></first>
 
 
 
