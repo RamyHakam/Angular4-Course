@@ -1,7 +1,7 @@
 import { SharedService } from './Services/shared.service';
 import { LoginService } from './Services/login.service';
 import { FirstComponent } from './first/first.component';
-import { Component } from '@angular/core';
+import { Component ,ViewChild ,AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
   name:string;
   password:string;
   status:boolean;
@@ -17,6 +17,8 @@ export class AppComponent {
   id:string="03003";
    //counter of notification 
    counter:number=0;
+
+   @ViewChild(FirstComponent) myfirst : FirstComponent;
 
   constructor( private mylogin:LoginService ,private myrouter:Router,public myshared:SharedService){
     var first=this.mylogin.login('admin2','admin');
@@ -87,6 +89,22 @@ sendMessage(){
 
 getFromChild(event){
   this.counter+=event;
+}
+
+//get name from first compmnet  
+getME(){
+  console.log(this.myfirst.name);
+}
+
+//change x on first 
+changeX(){
+  this.myfirst.update(13);
+
+}
+
+ngAfterViewInit(){
+
+
 }
 
 

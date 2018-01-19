@@ -10,13 +10,14 @@ import { Output ,EventEmitter } from '@angular/core';
 })
 export class FirstComponent {
     id:string;
-    name:string;
+    name:string="my first name is ramy";
+    x:number=20;
     @Input() message:string;
     @Output() notify=new EventEmitter<number>();
     constructor(private route:ActivatedRoute){
         //get optional params 
         this.id= this.route.snapshot.paramMap.get('id');
-        this.name=this.route.snapshot.params['name'];
+     //   this.name=this.route.snapshot.params['name'];
        // console.log(this.id);
         //console.log(this.name);
 
@@ -24,7 +25,10 @@ export class FirstComponent {
     //send data to parant 
     Send(){
 
-        this.notify.emit(20);
+        this.notify.emit(this.x);
+    }
+    update(newV){
+        this.x= newV;
     }
 
 }

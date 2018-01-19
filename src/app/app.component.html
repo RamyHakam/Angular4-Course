@@ -4,6 +4,9 @@
     this is the main component   this is the number of nitifcaitons  {{counter}}
 </div>
 
+<div><button (click)="getME()"> get first name </button> </div>
+<div><button (click)="changeX()"> change X value </button> </div>
+
 <first [message]="sendMessage()" (notify)="getFromChild($event)"></first>
 
 

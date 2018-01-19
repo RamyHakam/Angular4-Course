@@ -22,6 +22,7 @@ id:string;
   }
 
   ngOnInit() {
+    
   }
   loadme(){
     this.MyStream.createStream().subscribe(
